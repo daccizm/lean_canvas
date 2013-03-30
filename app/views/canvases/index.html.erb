@@ -1,0 +1,41 @@
+<h1>Listing canvases</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Problem</th>
+    <th>Solution</th>
+    <th>Key metrics</th>
+    <th>Unique value proposition</th>
+    <th>Unfair advantage</th>
+    <th>Channel</th>
+    <th>Customer segment</th>
+    <th>Cost structure</th>
+    <th>Revenue stream</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @canvases.each do |canvas| %>
+  <tr>
+    <td><%= canvas.title %></td>
+    <td><%= canvas.problem %></td>
+    <td><%= canvas.solution %></td>
+    <td><%= canvas.key_metric %></td>
+    <td><%= canvas.unique_value_proposition %></td>
+    <td><%= canvas.unfair_advantage %></td>
+    <td><%= canvas.channel %></td>
+    <td><%= canvas.customer_segment %></td>
+    <td><%= canvas.cost_structure %></td>
+    <td><%= canvas.revenue_stream %></td>
+    <td><%= link_to 'Show', canvas %></td>
+    <td><%= link_to 'Edit', edit_canvas_path(canvas) %></td>
+    <td><%= link_to 'Destroy', canvas, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Canvas', new_canvas_path %>
