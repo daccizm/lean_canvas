@@ -17,13 +17,14 @@ end
 
 gem 'devise'
 
+gem 'twitter-bootstrap-rails'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
 
   gem 'rspec-rails'
   gem 'factory_girl_rails'
-  gem 'twitter-bootstrap-rails'
   gem 'less-rails'
 
   gem 'sass-rails',   '~> 3.2.3'
