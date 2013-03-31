@@ -65,8 +65,9 @@
             <%= yield %>
           </div>
           <div class="span3">
-            <% if user_signed_in? %>
-              <div class="well sidebar-nav">
+            <div class="well sidebar-nav">
+
+              <% if user_signed_in? %>
                 <h3>Sidebar</h3>
                 <ul class="nav nav-list">
                   <li class="nav-header">Sidebar</li>
@@ -74,8 +75,16 @@
                   <li><%= link_to "Link2", "/path2"  %></li>
                   <li><%= link_to "Link3", "/path3"  %></li>
                 </ul>
-              </div><!--/.well -->
-            <% end %>
+              <% else %>
+                <h3>アカウント登録</h3>
+                <ul class="nav nav-list">
+                  <li class="nav-header">無料でご利用いただけます。</li>
+                  <li><%= link_to "ログイン", new_user_session_path %></li>
+                  <li><%= link_to "アカウント登録", new_user_session_path %></li>
+                </ul>
+              <% end %>
+
+            </div><!--/.well -->
           </div><!--/span-->
         </div><!--/row-->
 
